@@ -13,8 +13,11 @@ def shoot_ray(r, obj_list) :
         record = obj.hit(r, 0.01, record.t, record)
         if record.bHit == True : break
     
+    # if given ray hit any object, for representating object's rough surface, 
+    # reflect ray randomly.
     if record.bHit == True :
-        target = record.point + record.normal + vec3.get_random_in_sphere()
+        target = record.point + record.normal + vec3.get_random_in_sphere() 
+        # multiplying 0.5 means attenuated ray.
         return 0.5 * shoot_ray( ray(record.point, target - record.point), obj_list)
     
     dir = r.get_direction()

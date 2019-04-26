@@ -11,6 +11,8 @@ def shoot_ray(r, obj_list) :
         record = obj.hit(r, 0.00001, record.t, record)
         if record.bHit == True : break
     
+    # if given ray hit some object, get normal vector from hit record.
+    # Finally, saturates each elements of normal vector to range 0 ~ 1
     if record.bHit == True :
         return (record.normal + 1.0) * 0.5
     
