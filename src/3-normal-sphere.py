@@ -27,7 +27,7 @@ if __name__ == "__main__" :
 
     cam = camera(vec3(0.0, 0.0, 0.0), viewport( vec3(-2.0, -1.0, -1.0), 4.0, 2.0))
     obj_list = [
-        sphere(vec3(0.0, 0.0, -1.0), 0.5),
+        sphere(vec3(0.0,    0.0, -1.0),   0.5),
         sphere(vec3(0.0, -100.5, -1.0), 100.0)
     ]
 

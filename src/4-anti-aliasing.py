@@ -21,7 +21,7 @@ def shoot_ray(r, obj_list) :
     t = (dir.y + 1.0) * 0.5
     return vec3.interpolate(vec3(0.5, 0.7, 1.0), vec3(1.0, 1.0, 1.0), t)
 
-if __name__ == "__main_ _" :
+if __name__ == "__main__" :
     width  = 200
     height = 100
     # large num_samples : improved aliasing artifact. very slow.
@@ -31,7 +31,7 @@ if __name__ == "__main_ _" :
 
     cam = camera(vec3(0.0, 0.0, 0.0), viewport( vec3(-2.0, -1.0, -1.0), 4.0, 2.0))
     obj_list = [
-        sphere(vec3(0.0, 0.0, -1.0), 0.5),
+        sphere(vec3(0.0,    0.0, -1.0),   0.5),
         sphere(vec3(0.0, -100.5, -1.0), 100.0)
     ]
 
